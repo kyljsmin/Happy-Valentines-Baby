@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Den ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+    font-size: 1.3em;
+    width: 70%;
+    margin: auto;
+    animation: fadeIn 3s ease-in-out;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4e88;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffe6ec;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.heart {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy Valentine's Day, Den ❤️</h1>
+
+<p>
+From the day you came into my life, everything felt brighter.  
+You are my peace, my happiness, and my forever favorite person.  
+No matter what happens, I will always choose you. 💕
+</p>
+
+<button onclick="showMessage()">Click me baby 💌</button>
+
+<script>
+function showMessage() {
+    alert("I love you so much, Den. Thank you for being my everything. ❤️ - CK");
+}
+
+// floating hearts
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}, 300);
+</script>
+
+</body>
+</html>
